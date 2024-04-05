@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 // Initialize user balance and pin code 
@@ -42,7 +43,7 @@ if (pinAnswer.pin === myPin) {
                 }
             ]);
             if (fastCashAns.fastCash > mybalance) {
-                console.log("Insufficient Balance");
+                console.log(chalk.red("Insufficient Balance"));
             }
             else {
                 mybalance -= fastCashAns.fastCash;
